@@ -1,17 +1,17 @@
-import setuptools
+from setuptools import setup, find_packages
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
-setuptools.setup(
+setup(
     name='vidspinner',
-    version='1.0.1',
+    version='1.0.2',
     author='Maehdakvan',
     author_email='visitanimation@google.com',
     description='Video uniqualizer.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/DedInc/ugents',
+    url='https://github.com/DedInc/vidspinner',
     project_urls={
         'Bug Tracker': 'https://github.com/DedInc/vidspinner/issues',
     },
@@ -20,9 +20,8 @@ setuptools.setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    packages=['vidspinner'],
+    packages=find_packages(),
     include_package_data = True,
     install_requires = ['Pillow>=8.0'],
-    data_files = [('vidspinner',  ['vidspinner/ffmpeg.exe', 'vidspinner/pixel.png'])],
-    python_requires='>=3.6',
+    python_requires='>=3.6'
 )
