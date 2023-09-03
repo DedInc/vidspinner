@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='vidspinner',
-    version='1.0.2',
+    version='1.0.3',
     author='Maehdakvan',
     author_email='visitanimation@google.com',
     description='Video uniqualizer.',
