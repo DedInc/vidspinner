@@ -32,7 +32,7 @@ You can also make a video unique using an overlay filter effect. For example, to
 ```python
 from vidspinner import Filter
 
-vs.unique_by_pixel('input.mp4', 'output.mp4', Filter.RETRO)
+vs.unique_by_filter('input.mp4', 'output.mp4', Filter.RETRO)
 ```
 
 <h2>🎨 Available Filters</h2>
