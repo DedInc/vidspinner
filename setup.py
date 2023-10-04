@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='vidspinner',
-    version='1.0.3',
+    version='2.0.0b1',
     author='Maehdakvan',
     author_email='visitanimation@google.com',
     description='Video uniqualizer.',
@@ -22,6 +22,6 @@ setup(
     ],
     packages=find_packages(),
     include_package_data = True,
-    install_requires = ['Pillow>=8.0'],
+    install_requires = [],
     python_requires='>=3.6'
 )
