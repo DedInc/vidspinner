@@ -201,7 +201,7 @@ Some common effect parameters:
 
 - `BLINK` - `interval` 
 - `SHADOW` - `color, x, y`
-- `SHAKE` - `amplitude`
+- `SHAKE` - `amplitude, x, y`
 - `FADE_IN` - `duration`
 - `FADE_OUT` - `duration`  
 - `SCROLL_TB` - `duration`
