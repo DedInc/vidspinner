@@ -31,6 +31,9 @@ class TextEffectBuilder:
     )
     self.effects.append(effect)
 
+  def add_custom_effect(self, effect_string):
+    self.effects.append(effect_string)
+
   def build(self):
     return ':'.join(self.effects)
 
@@ -38,7 +41,6 @@ class TextBuilder:
   
   def __init__(self):
     self.text = ''
-    self.filters = []
     self.update()
 
   def update(self, FONT = ''):
@@ -66,7 +68,6 @@ class TextBuilder:
     effects = effect_builder.build()
     if effects:
       self.text += f':{effects}'
-    self.filters.append(self.text)
     return self
 
   def set_font(self, font):

@@ -5,10 +5,10 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='vidspinner',
-    version='2.0.0b1',
+    version='2.0.0',
     author='Maehdakvan',
     author_email='visitanimation@google.com',
-    description='Video uniqualizer.',
+    description='VidSpinner is a Python library for easily creating unique versions of videos using filters, text, and audio effects.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/DedInc/vidspinner',

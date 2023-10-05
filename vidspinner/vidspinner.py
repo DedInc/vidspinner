@@ -95,8 +95,14 @@ class MontageBuilder:
     self.audio_filters = None
 
   def add_filter(self, filter_string, start_duration=None, end_duration=None):
-    if start_duration is not None:
+    i = len(self.filters)
+
+    filter_string = f'[v{i}]{filter_string}'
+
+    if start_duration and end_duration:
         filter_string += f':enable=\'between(t,{start_duration},{end_duration})\''
+
+    filter_string += f'[v{i + 1}]'
 
     self.filters.append(filter_string)
 
@@ -108,7 +114,7 @@ class MontageBuilder:
     command = ['ffmpeg', '-i', self.input]
 
     if self.filters:
-        filters_string = ','.join(self.filters)
+        filters_string = ';'.join(self.filters)
         command += ['-vf', filters_string]
 
     command += [

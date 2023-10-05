@@ -13,16 +13,67 @@ pip install vidspinner
 ```python
 from vidspinner import MontageBuilder
 from vidspinner.filters import Filter
+from vidspinner.builders.text import TextBuilder, TextEffectBuilder
+from vidspinner.builders.audio import AudioBuilder
 
 mb = MontageBuilder()
-mb.input = 'input.mp4'  
+
+mb.input = 'input.mp4'
 mb.output = 'output.mp4'
+mb.clear_meta_tags = True # clear meta tags
 
-mb.add_filter(Filter.DREAMY) 
-mb.clear_meta_tags = True
+mb.add_filter(Filter.RETRO)
 
-mb.build()
+########### Test text ############ 
+tb = TextBuilder()
+tb.set_params(text='Wow! It is a simple text!')
+mb.add_filter(tb.build(), start_duration=2, end_duration=5) # add text
+##################################
+
+####################### Fisheye effect ################
+mb.add_filter(Filter.FISHEYE, start_duration=3, end_duration=5.8)
+########################################################
+
+
+############## Creating logo ###########
+tb.set_font('comic_sans.ttf')
+tb.set_params(color='cyan', text='VidSpinner', size=48)
+
+teb = TextEffectBuilder()
+teb.add_effect(effect='SHADOW', x=5, y=5, color='black')
+teb.add_effect(effect='SHAKE', x=0, y=1850, amplitude=6) # for the shake effect you need to set the position of the text relative to its current coordinates.
+
+box_effect = 'box=1:boxcolor={color}@{transparency}:boxborderw={width}' # custom text effect
+
+teb.add_custom_effect(box_effect.format(
+  color='lime',
+  transparency=0.3,
+  width=3
+))
+
+tb.add_effect(teb)
+
+mb.add_filter(tb.build())
+#######################################
+
+########### Audio manipulations ############
+ab = AudioBuilder()
+ab.set_pitch(1.5)
+mb.set_audio(ab)
+#####################################
+
+mb.build() # build result
 ```
+
+<h2>🎥 Example (Quickstart Result):</h2>
+
+<h3>📹 Input:</h3>
+
+https://github.com/DedInc/test/assets/41906303/30282cf8-43d9-4fe1-abce-857e363c7189
+
+<h3>🔮 Output:</h3>
+
+https://github.com/DedInc/test/assets/41906303/079c245a-79b0-4f47-bb36-934d0a1afa6e
 
 <h2>🎨 Features</h2>
 
