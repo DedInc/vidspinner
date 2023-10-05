@@ -69,11 +69,11 @@ mb.build() # build result
 
 <h3>📹 Input:</h3>
 
-https://github.com/DedInc/test/assets/41906303/30282cf8-43d9-4fe1-abce-857e363c7189
+https://github.com/DedInc/vidspinner/assets/41906303/3377f048-c482-4aca-9592-5a22a262c2d0
 
 <h3>🔮 Output:</h3>
 
-https://github.com/DedInc/test/assets/41906303/079c245a-79b0-4f47-bb36-934d0a1afa6e
+https://github.com/DedInc/vidspinner/assets/41906303/6da817f3-a398-4763-9885-47aa5d876856
 
 <h2>🎨 Features</h2>
 
