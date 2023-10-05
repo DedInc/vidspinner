@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='vidspinner',
-    version='2.0.0',
+    version='2.0.1',
     author='Maehdakvan',
     author_email='visitanimation@google.com',
     description='VidSpinner is a Python library for easily creating unique versions of videos using filters, text, and audio effects.',
